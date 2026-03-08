@@ -11,6 +11,11 @@ background:linear-gradient(
 padding-top:20px;
 
 }
+
+.hero .reveal{
+opacity:1;
+transform:none;
+}
 .hero-wrapper{
 
 display:flex;
