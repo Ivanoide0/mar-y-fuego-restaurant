@@ -2,19 +2,22 @@ const reveals = document.querySelectorAll(".reveal");
 
 function revealElements(){
 
-reveals.forEach(el => {
+  const windowHeight = window.innerHeight;
 
-const windowHeight = window.innerHeight;
-const elementTop = el.getBoundingClientRect().top;
+  reveals.forEach(el => {
 
-if(elementTop < windowHeight - 100){
-el.classList.add("active");
+    const elementTop = el.getBoundingClientRect().top;
+
+    if(elementTop < windowHeight - 100){
+      el.classList.add("active");
+    }
+
+  });
+
 }
 
-});
-
-}
-
+// ejecuta al hacer scroll
 window.addEventListener("scroll", revealElements);
 
+// ejecuta al cargar la página
 window.addEventListener("load", revealElements);

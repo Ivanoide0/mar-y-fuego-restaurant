@@ -2,7 +2,7 @@
 @import "base/variables.css";
 @import "base/typography.css";
 
-@import "layout/container.css";
+@import "base/container.css";
 
 @import "components/navbar.css";
 @import "components/hero.css";
@@ -12,5 +12,5 @@
 @import "components/gallery.css";
 @import "components/testimonials.css";
 @import "components/contact.css";
+@import "components/location.css";
 @import "components/footer.css";
-@import "base/container.css";

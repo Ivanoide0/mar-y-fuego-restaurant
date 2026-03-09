@@ -1,3 +1,7 @@
+/* =========================
+   HERO SECTION
+========================= */
+
 .hero{
 
 min-height:900px;
@@ -12,10 +16,16 @@ padding-top:20px;
 
 }
 
+/* Evita que el hero tenga reveal */
 .hero .reveal{
 opacity:1;
 transform:none;
 }
+
+/* =========================
+   HERO WRAPPER
+========================= */
+
 .hero-wrapper{
 
 display:flex;
@@ -24,11 +34,148 @@ align-items:center;
 
 justify-content:space-between;
 
-gap:120px;
+gap:80px;
 
 padding-top:40px;
 
+flex-wrap:wrap;
+
 }
+
+/* =========================
+   HERO LEFT
+========================= */
+
+.hero-left{
+
+max-width:550px;
+
+}
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.hero-title{
+
+font-family:'Oswald', sans-serif;
+
+font-size:clamp(42px, 8vw, 100px);
+
+line-height:1.1;
+
+color:#E6E1C2;
+
+text-shadow:
+-6px 4px 0 #BF0A0D;
+
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-right img{
+
+width:100%;
+
+max-width:420px;
+
+border-radius:28px;
+
+box-shadow:0 20px 60px rgba(0,0,0,0.4);
+
+}
+
+/* =========================
+   HERO IMAGE CONTAINER
+========================= */
+
+.hero-image{
+
+position:relative;
+
+width:100%;
+
+max-width:420px;
+
+border-radius:28px;
+
+overflow:hidden;
+
+}
+
+.hero-image::before{
+
+content:"";
+
+position:absolute;
+
+width:120%;
+height:120%;
+
+top:-10%;
+left:-10%;
+
+background:radial-gradient(
+circle,
+rgba(191,10,13,0.6),
+transparent 70%
+);
+
+filter:blur(40px);
+
+z-index:-1;
+
+animation:glow 6s infinite alternate;
+
+}
+
+/* Glow animation */
+
+@keyframes glow{
+
+from{
+opacity:0.6;
+transform:scale(1);
+}
+
+to{
+opacity:0.9;
+transform:scale(1.1);
+}
+
+}
+
+/* =========================
+   FOOD CARD
+========================= */
+
+.food-card{
+
+background:var(--color-dark);
+
+padding:20px;
+
+border-radius:16px;
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+margin-top:30px;
+margin-bottom:30px;
+
+flex-wrap:wrap;
+
+}
+
+/* =========================
+   BUTTON
+========================= */
 
 .btn-primary{
 
@@ -75,125 +222,9 @@ box-shadow:
 
 }
 
-.hero-left{
-
-max-width:550px;
-
-}
-
-.hero-right img{
-
-width:420px;
-
-border-radius:28px;
-
-box-shadow:0 20px 60px rgba(0,0,0,0.4);
-
-}
-
-.food-card{
-
-background:var(--color-dark);
-
-padding:20px;
-
-border-radius:16px;
-
-display:flex;
-align-items:center;
-gap:20px;
-
-margin-top:30px;
-margin-bottom:30px;
-
-}
-.hero-image{
-
-position:relative;
-
-width:420px;
-
-border-radius:28px;
-
-overflow:hidden;
-
-}
-
-.hero-image::before{
-
-animation:glow 6s infinite alternate;
-
-}
-
-@keyframes glow{
-
-from{
-opacity:0.6;
-transform:scale(1);
-}
-
-to{
-opacity:0.9;
-transform:scale(1.1);
-}
-
-}
-
-.hero-image::before{
-
-content:"";
-
-position:absolute;
-
-width:120%;
-height:120%;
-
-top:-10%;
-left:-10%;
-
-background:radial-gradient(
-circle,
-rgba(191,10,13,0.6),
-transparent 70%
-);
-
-filter:blur(40px);
-
-z-index:-1;
-
-}
-
-.hero-title{
-
-position:relative;
-
-font-family:'Oswald', sans-serif;
-font-size:100px;
-
-}
-
-.title-main{
-
-position:relative;
-
-color:#E6E1C2;
-
-z-index:2;
-
-}
-
-.title-shadow{
-
-position:absolute;
-
-left:-6px;
-top:4px;
-
-color:#BF0A0D;
-
-z-index:1;
-
-}
+/* =========================
+   SCROLL REVEAL
+========================= */
 
 .reveal{
 
@@ -213,6 +244,9 @@ transform:translateY(0);
 
 }
 
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width:1024px){
 
@@ -228,31 +262,72 @@ gap:60px;
 
 .hero-right img{
 
-width:340px;
-
-}
-
-.hero-title{
-
-font-size:70px;
+max-width:340px;
 
 }
 
 }
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width:600px){
 
+.hero{
+
+min-height:auto;
+
+padding:60px 20px;
+
+}
+
+.hero-wrapper{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:40px;
+
+}
+
+.hero-left{
+
+max-width:100%;
+
+}
+
 .hero-title{
 
-font-size:48px;
+font-size:clamp(36px, 9vw, 44px);
+
+text-shadow:
+-3px 2px 0 #BF0A0D;
+
 
 }
 
 .hero-subtitle{
 
-font-size:20px;
+font-size:18px;
+
+}
+
+.food-card{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-right img{
+
+max-width:300px;
+
+margin:auto;
 
 }
 
 }
-
