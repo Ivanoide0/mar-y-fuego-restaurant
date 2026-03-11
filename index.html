@@ -13,39 +13,47 @@
 
 
 <!-- Open Graph -->
-
 <meta property="og:title" content="Mar y Fuego | Japanese Sushi Experience">
-
 <meta property="og:description" content="Fresh sushi prepared with fire and precision. Discover our menu and reserve your table at Mar y Fuego.">
-
 <meta property="og:image" content="https://mar-y-fuego-restaurant.netlify.app/assets/images/og-image.jpg">
-
 <meta property="og:url" content="https://mar-y-fuego-restaurant.netlify.app">
-
 <meta property="og:type" content="website">
 
 
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Restaurant",
+ "name": "Mar y Fuego",
+ "image": "https://mar-y-fuego-restaurant.netlify.app/assets/images/hero/sushi-fire.webp",
+ "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "Av. Tulum 123",
+   "addressLocality": "Cancún",
+   "addressCountry": "MX"
+ },
+ "servesCuisine": "Japanese Sushi",
+ "url": "https://mar-y-fuego-restaurant.netlify.app"
+}
+</script>
+
+
 <!-- Favicon -->
-
 <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon_io/favicon.ico">
-
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon_io/favicon-32x32.png">
-
 <link rel="apple-touch-icon" href="assets/images/favicon/favicon_io/apple-touch-icon.png">
 
 
-<!-- Swiper -->
-
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
-</head>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<!-- MAIN CSS -->
+
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+<!-- CSS -->
 <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -490,7 +498,7 @@ referrerpolicy="no-referrer-when-downgrade">
   <div class="footer-bottom">
 
     <p>
-      © 2026 Mar y Fuego. All rights reserved.
+      © 2026 Mar y Fuego. Este proyecto es meramente con propósitos de mejorar mi C.V y darme a conocer como desarrollador, y no representa un restaurante real 
     </p>
 
   </div>
